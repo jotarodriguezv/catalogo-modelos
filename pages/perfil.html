@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Perfil — Talent Roster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css"/>
+  <link rel="stylesheet" href="../css/perfil.css"/>
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <a href="../index.html" style="display:flex;align-items:center;gap:10px;text-decoration:none;">
+          <span class="logo-mark">TR</span>
+          <span class="logo-text">Talent Roster</span>
+        </a>
+      </div>
+      <nav class="site-nav">
+        <a href="../index.html" class="back-link">← Volver al catálogo</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="perfilMain">
+    <div class="loading-state" id="loadingState">
+      <div class="spinner"></div>
+      <p>Cargando perfil...</p>
+    </div>
+
+    <div class="perfil-wrapper hidden" id="perfilWrapper">
+
+      <section class="perfil-hero">
+        <div class="perfil-foto-wrap">
+          <img id="perfilFoto" src="" alt="Foto de perfil" class="perfil-foto"/>
+          <div class="perfil-foto-overlay"></div>
+        </div>
+        <div class="perfil-intro">
+          <div class="perfil-badge" id="perfilEstilo"></div>
+          <h1 class="perfil-nombre" id="perfilNombre"></h1>
+          <p class="perfil-ciudad" id="perfilCiudad"></p>
+          <p class="perfil-descripcion" id="perfilDescripcion"></p>
+        </div>
+      </section>
+
+      <section class="perfil-tarifas">
+        <h2 class="section-title">Tarifas</h2>
+        <div class="tarifas-grid">
+          <div class="tarifa-card">
+            <div class="tarifa-label">Sesión estándar</div>
+            <div class="tarifa-sub">2 horas de grabación</div>
+            <div class="tarifa-valor" id="tarifaSesion"></div>
+          </div>
+          <div class="tarifa-card">
+            <div class="tarifa-label">Hora adicional</div>
+            <div class="tarifa-sub">Por cada hora extra</div>
+            <div class="tarifa-valor" id="tarifaHora"></div>
+          </div>
+          <div class="tarifa-card tarifa-transporte" id="tarifaTransporteCard">
+            <div class="tarifa-label">Transporte</div>
+            <div class="tarifa-sub">Dentro de la ciudad</div>
+            <div class="tarifa-valor" id="tarifaTransporte"></div>
+          </div>
+        </div>
+        <p class="tarifas-nota">* Desplazamientos fuera de la ciudad se acuerdan directamente. La disponibilidad varía según agenda de la modelo.</p>
+      </section>
+
+      <section class="perfil-portafolio">
+        <h2 class="section-title">Portafolio</h2>
+        <div class="portafolio-tabs">
+          <button class="tab-btn active" data-tab="fotos">Fotografías</button>
+          <button class="tab-btn" data-tab="videos">Videos</button>
+        </div>
+
+        <div class="portafolio-panel" id="tabFotos">
+          <div class="fotos-grid" id="fotosGrid"></div>
+          <div class="empty-port hidden" id="emptyFotos">No hay fotografías disponibles aún.</div>
+        </div>
+
+        <div class="portafolio-panel hidden" id="tabVideos">
+          <div class="videos-grid" id="videosGrid"></div>
+          <div class="empty-port hidden" id="emptyVideos">No hay videos disponibles aún.</div>
+        </div>
+      </section>
+
+    </div>
+
+    <div class="error-state hidden" id="errorState">
+      <p>No se encontró el perfil solicitado.</p>
+      <a href="../index.html" class="btn-primary">Volver al catálogo</a>
+    </div>
+  </main>
+
+  <div class="lightbox hidden" id="lightbox">
+    <button class="lightbox-close" id="lightboxClose">✕</button>
+    <img class="lightbox-img" id="lightboxImg" src="" alt=""/>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Talent Roster</span>
+      <div class="footer-links">
+        <a href="../pages/privacidad.html">Política de uso de imagen</a>
+      </div>
+      <span class="footer-copy">Contenido exclusivo para fines comerciales</span>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/supabase.js"></script>
+  <script src="../js/perfil.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Talent Roster</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+  <div class="noise"></div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="logo">
+        <span class="logo-mark">TR</span>
+        <span class="logo-text">Talent Roster</span>
+      </div>
+      <nav class="site-nav">
+        <a href="pages/privacidad.html">Política de imagen</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-label">Catálogo profesional</div>
+      <h1 class="hero-title">Talent<br/><em>Roster</em></h1>
+      <p class="hero-sub">Modelos disponibles para sesiones de grabación y producción de contenido comercial.</p>
+      <div class="hero-line"></div>
+    </section>
+
+    <section class="filters">
+      <div class="filters-inner">
+        <button class="filter-btn active" data-city="all">Todas las ciudades</button>
+        <div class="city-filters" id="cityFilters"></div>
+      </div>
+    </section>
+
+    <section class="catalog" id="catalog">
+      <div class="catalog-grid" id="catalogGrid">
+        <!-- Cards generadas por JS -->
+      </div>
+      <div class="loading-state" id="loadingState">
+        <div class="spinner"></div>
+        <p>Cargando modelos...</p>
+      </div>
+      <div class="empty-state hidden" id="emptyState">
+        <p>No hay modelos disponibles en este momento.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <span class="footer-logo">Talent Roster</span>
+      <div class="footer-links">
+        <a href="pages/privacidad.html">Política de uso de imagen</a>
+      </div>
+      <span class="footer-copy">Contenido exclusivo para fines comerciales</span>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

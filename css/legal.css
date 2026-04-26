@@ -1,0 +1,122 @@
+/* =====================================================
+   PÁGINA LEGAL — POLÍTICA DE USO DE IMAGEN
+   ===================================================== */
+
+.legal-main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 60px 32px 100px;
+}
+
+.legal-header {
+  margin-bottom: 60px;
+  padding-bottom: 48px;
+  border-bottom: 1px solid var(--border);
+}
+
+.legal-tag {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--verde);
+  border: 1px solid rgba(0,200,83,0.3);
+  padding: 4px 12px;
+  border-radius: 2px;
+  margin-bottom: 24px;
+}
+
+.legal-header h1 {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 6vw, 56px);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text);
+  margin-bottom: 24px;
+}
+
+.legal-header h1 em {
+  font-style: italic;
+  color: var(--verde);
+}
+
+.legal-intro {
+  font-size: 15px;
+  color: var(--text-muted);
+  line-height: 1.8;
+  border-left: 2px solid var(--verde);
+  padding-left: 20px;
+}
+
+.legal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.legal-section h2 {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.legal-section p {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.85;
+  margin-bottom: 12px;
+}
+
+.legal-section ul {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.legal-section ul li {
+  font-size: 14px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  padding-left: 20px;
+  position: relative;
+}
+
+.legal-section ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--verde);
+  font-size: 12px;
+}
+
+.legal-section strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+.legal-disclaimer {
+  margin-top: 20px;
+  padding: 24px 28px;
+  background: var(--bg2);
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--verde);
+  border-radius: var(--radius);
+}
+
+.legal-disclaimer p {
+  font-size: 13px;
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin: 0;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .legal-main { padding: 40px 20px 80px; }
+  .legal-header h1 { font-size: 36px; }
+}
