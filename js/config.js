@@ -4,8 +4,8 @@
 // Supabase → Settings → API
 // =====================================================
 
-const SUPABASE_URL = 'https://TU_PROJECT_URL.supabase.co';
-const SUPABASE_ANON_KEY = 'TU_ANON_KEY_AQUI';
+const SUPABASE_URL = 'https://tjyqfrtkjnwqxzmrcvmx.supabase.co/rest/v1/';
+const SUPABASE_ANON_KEY = 'sb_publishable_f8haHHEAi6O3e45zXFbAYw_tZKd-Lln';
 
 // Formateador de moneda colombiana
 function formatCOP(valor) {
